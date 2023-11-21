@@ -1,0 +1,46 @@
+.home-screen-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #7785db;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-screen-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 532px;
+  height: 640px;
+  background-color: white;
+  border-radius: 24px;
+}
+
+.shopping-bag-image {
+  width: 210px;
+  height: auto;
+}
+
+.home-screen-title {
+  max-width: 310px;
+  text-align: center;
+}
+
+.home-screen-sub-title {
+  max-width: 310px;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.home-screen-sub-title-description {
+  max-width: 442px;
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.home-screen-button-container {
+  width: 442px;
+  margin-top: 20px;
+}
