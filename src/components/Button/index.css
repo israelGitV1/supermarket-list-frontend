@@ -16,6 +16,9 @@
   border: 1px solid #7785db;
 }
 
+@media screen and (max-width: 420px) {
+}
+
 .main {
   background-color: #7785db;
   color: white;

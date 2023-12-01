@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./index.css";
-import { getList } from "../../services/request";
+import { getList, UpdateItem } from "../../services/request";
 import { ListCard, Loader, ListRender, Button, Modal } from "../../components";
 
 export const ListScreen = () => {
@@ -37,6 +37,18 @@ export const ListScreen = () => {
     setSelectedItem(item);
   };
 
+  const onCheckItem = async (item) => {
+    const result = await UpdateItem(item?._id, {
+      name: item.name,
+      quantity: Number(item.quantity),
+      checked: !item.checked,
+    });
+
+    if (!result.error) {
+      await loadListItems();
+    }
+  };
+
   return (
     <div className="list-screen-container">
       <div className="list-screen-content-container">
@@ -57,7 +69,11 @@ export const ListScreen = () => {
           {loading ? (
             <Loader />
           ) : (
-            <ListRender onEdit={onEditItem} list={listData} />
+            <ListRender
+              onCheckItem={onCheckItem}
+              onEdit={onEditItem}
+              list={listData}
+            />
           )}
         </div>
       </div>
