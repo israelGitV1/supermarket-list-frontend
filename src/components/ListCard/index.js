@@ -1,8 +1,6 @@
 import "./index.css";
 
-export const ListCard = (props) => {
-  const { item } = props;
-
+export const ListCard = ({ item, onclick }) => {
   return (
     <div className="list-card-container">
       <img
@@ -10,7 +8,7 @@ export const ListCard = (props) => {
         src={`/images/${item?.cheked ? "checked.svg" : "unchecked.svg"}`}
         alt="ckecked-item"
       ></img>
-      <div className="list-card-text-container">
+      <div onClick={() => onclick(item)} className="list-card-text-container">
         <span className="list-card-title">{item?.name} </span>
         <span className="list-card-subtitle">{item?.quantity} Unidades</span>
       </div>

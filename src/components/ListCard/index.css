@@ -10,7 +10,6 @@
   background-color: #f2f4ff;
   border-radius: 12px;
   margin-bottom: 24px;
-  cursor: pointer;
 }
 
 .checkbox {
@@ -22,12 +21,14 @@
   object-fit: contain;
   cursor: pointer;
   margin-right: 12px;
+  cursor: pointer;
 }
 
 .list-card-text-container {
   display: flex;
   width: 97%;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .list-card-title {
@@ -44,4 +45,5 @@
   width: 6px;
   height: 12px;
   object-fit: contain;
+  cursor: pointer;
 }
