@@ -3,13 +3,13 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  width: 96%;
+  width: 90%;
   height: 58px;
   min-height: 58px;
   padding: 0px 12px;
   background-color: #f2f4ff;
   border-radius: 12px;
-  margin-bottom: 24px;
+  margin-bottom: 14px;
 }
 
 .checkbox {
@@ -46,4 +46,10 @@
   height: 12px;
   object-fit: contain;
   cursor: pointer;
+}
+
+@media screen and (max-width: 440px) {
+  .list-card-container {
+    margin-right: 12px;
+  }
 }

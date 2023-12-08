@@ -1,6 +1,12 @@
+h1 {
+  font-size: 22px;
+}
+h3 {
+  font-size: 13px;
+}
 .home-screen-container {
   display: flex;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-color: #7785db;
   align-items: center;
@@ -12,37 +18,40 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 532px;
-  height: 640px;
+  width: 400px;
+  height: 600px;
+  min-height: 190px;
   background-color: white;
   border-radius: 24px;
 }
 
 .shopping-bag-image {
-  width: 210px;
+  width: 170px;
   height: auto;
+  margin-top: 40px;
 }
 
 .home-screen-title {
-  max-width: 310px;
+  max-width: 95%;
   text-align: center;
 }
 
 .home-screen-sub-title {
-  max-width: 310px;
+  max-width: 95%;
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 16%;
 }
 
 .home-screen-sub-title-description {
-  max-width: 442px;
+  max-width: 90%;
   text-align: left;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .home-screen-button-container {
-  width: 442px;
-  margin-top: 20px;
+  width: 90%;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 .content-input-name {
@@ -50,5 +59,91 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 85%;
+  width: 90%;
+  margin-bottom: 3%;
+}
+
+@media screen and (max-height: 700px) {
+  .home-screen-content-container {
+    height: 90%;
+    width: 340px;
+  }
+  .shopping-bag-image {
+    width: 50%;
+    height: auto;
+    margin-bottom: 15px;
+    margin-top: 50px;
+  }
+
+  h3 {
+    font-size: 13px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .home-screen-content-container {
+    width: 340px;
+    height: 600px;
+  }
+
+  .home-screen-button-container {
+    width: 95%;
+    margin-top: 0%;
+    margin-bottom: 60px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  .content-input-name {
+    width: 95%;
+    margin-bottom: 40px;
+  }
+  .shopping-bag-image {
+    width: 160px;
+    height: auto;
+    margin-bottom: 15px;
+    margin-top: 50px;
+  }
+
+  .home-screen-title {
+    max-width: 95%;
+    text-align: center;
+    margin-top: 0px;
+  }
+
+  .home-screen-sub-title {
+    max-width: 95%;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .home-screen-sub-title-description {
+    max-width: 95%;
+    text-align: left;
+    margin-bottom: 16px;
+  }
+
+  @media screen and (max-width: 290px) {
+    .home-screen-content-container {
+      width: 95%;
+      height: 600px;
+    }
+    h3 {
+      font-size: 12px;
+    }
+    h1 {
+      font-size: 20px;
+    }
+    .shopping-bag-image {
+      width: 140px;
+      height: auto;
+      margin-bottom: 15px;
+      margin-top: 50px;
+    }
+  }
 }

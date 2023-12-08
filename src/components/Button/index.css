@@ -16,7 +16,15 @@
   border: 1px solid #7785db;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 440px) {
+  .button-container {
+    margin-bottom: 12px;
+    font-size: 17px;
+    padding: 3px;
+  }
+  .button-mini {
+    width: 42px;
+  }
 }
 
 .main {
@@ -25,8 +33,9 @@
 }
 
 .outline {
-  background-color: #f2f4ff;
+  background-color: white;
   color: #7785db;
+  border: 2px solid rgb(237, 230, 230);
 }
 
 .button-icon {

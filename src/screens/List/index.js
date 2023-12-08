@@ -62,7 +62,9 @@ export const ListScreen = () => {
             <h1 className="list-screen-header-title">Lista Supermercado</h1>
           </div>
           <div className="list-screen-header-button-container">
-            <Button onClick={onClickAddButton}> Adicionar </Button>
+            <Button onClick={onClickAddButton} width={"button-mini"}>
+              {window.innerWidth <= 440 ? "+" : "Adicionar"}
+            </Button>
           </div>
         </div>
         <div className="list-screen-list-container">
