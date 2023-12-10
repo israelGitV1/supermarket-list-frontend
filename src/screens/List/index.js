@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./index.css";
 import { getList, UpdateItem } from "../../services/request";
 import { ListCard, Loader, ListRender, Button, Modal } from "../../components";
 
 export const ListScreen = () => {
+  const navigate = useNavigate();
   const [modalVisible, setModalVisible] = useState(false);
   const [loading, setloading] = useState(true);
   const [listData, setListData] = useState([]);
@@ -29,6 +31,10 @@ export const ListScreen = () => {
     setModalVisible(false);
     loadListItems();
     setSelectedItem(null);
+  };
+
+  const onCloseList = () => {
+    navigate("/");
   };
 
   const onEditItem = (item) => {
@@ -65,6 +71,10 @@ export const ListScreen = () => {
             <Button onClick={onClickAddButton} width={"button-mini"}>
               {window.innerWidth <= 440 ? "+" : "Adicionar"}
             </Button>
+            <button
+              onClick={onCloseList}
+              className="modal-close-button"
+            ></button>
           </div>
         </div>
         <div className="list-screen-list-container">
